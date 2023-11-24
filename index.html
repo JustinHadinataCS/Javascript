@@ -1,18 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        function addNum(array, num){
-            return array.map((value, index) => value + num);
-            
-        }
-        console.log(addNum([1,2,3],3));
+<html>
+  <head></head>
+  <link rel="stylesheet" href="style.css">
+  <body>
+    <p class="js-calculation perfect"></p>
 
+    <p>
+      <button class="numbers" onclick="
+        updateCalculation('1');
+      ">1</button>
+
+      <button class="numbers" onclick="
+        updateCalculation('2');
+      ">2</button>
+
+      <button class="numbers" onclick="
+        updateCalculation('3');
+      ">3</button>
+
+      <button class="symbol" onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button class="numbers" onclick="
+        updateCalculation('4');
+      ">4</button>
+
+      <button class="numbers" onclick="
+        updateCalculation('5');
+      ">5</button>
+
+      <button class="numbers" onclick="
+        updateCalculation('6');
+      ">6</button>
+
+      <button class="symbol" onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button class="numbers" onclick="
+        updateCalculation('7');
+      ">7</button>
+
+      <button class="numbers" onclick="
+        updateCalculation('8');
+      ">8</button>
+
+      <button class="numbers" onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button class="symbol" onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button class="numbers" onclick="
+        updateCalculation('0');
+      ">0</button>
+
+      <button class="numbers" onclick="
+        updateCalculation('.');
+      ">.</button>
+
+      <button class="numbers" onclick="
+        calculation = eval(calculation);
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      ">=</button>
+
+      <button class="symbol" onclick="
+        updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button class="numbers" onclick="
+        calculation = '';
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    </p>
+
+    <script src="java.js">
     </script>
-</body>
+  </body>
 </html>
